@@ -160,5 +160,81 @@ const handleDeleteClick = (event) =>{
 
 };
 
+function getTotalAmount (){
+    const totalElement = document.getElementById("total-amount");
+
+    if(!totalElement){
+        console.error("Total Amount element is not found!");
+        return 0;
+    }
+    // Extract and clean the amount properly
+    let totalAmountText = totalElement.innertText.trim().replace(/[^\d.]/g, "");
+    let totalAmount = parseFloat(totalAmountText);
+
+    if (inNaN (totalAmount) || totalAmount<=0){
+        console.error("Invalid Total AMount detected", totalAmount);
+        return 0;
+    }
+    return totalAmount;
+}
+
+
+
+
+async function getCurrentUser(){
+    try{
+        const user = await account.get();
+        return user.$id;
+    }catch(err){
+        console.log("User Not Logged in", err);
+        return null;
+    }
+}
+
+// initialize your function
+const functions =  new Appwrite.functions(client);
+const appwriteFunctionId = "67a80f4c0033038cd2ce"
+
+
+async function triggerCheckout(){
+    try{
+        await displayCart();
+        const totalAmount = getTotalAmount();
+
+        // trigger the appwrite function
+const response = await functions.createExecution(
+    appwriteFunctionId, JSON.stringify({
+        path:"/checkout",
+        failureUrl: `${window.location.origin}/failure.html`,
+        successUrl: `${window.location.origin}/success.html`,
+        totalAmount,
+    }),
+    false,
+    "/checkout",
+    "POST",
+    {
+        "content-Type": "application/json",
+    }
+);
+console.log("Response status", response.status);
+console.log("Response headers", response.responseHeaders);
+
+if (response.responseStatusCode === 303) {
+    const locationheader = response.responseHeaders.find((header) => {
+        header.name.toLowerCase() === "loacation";
+    });
+    if (locationheader) {
+        console.log("Redirecting to:", locationheader.value);
+        window.open(locationheader.value, "_blank");
+    }else{
+        console.error("response is not a redirect. status code", response.status);
+    }
+}else{
+    console.error("Response is not a redirect", response.status);
+}
+    }catch(err) {
+    console.log("Error triggerin checkout", err);
+    }
+}
 
 displayCart();
