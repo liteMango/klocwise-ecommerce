@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Css Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"> -->
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@16.0.2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.js"
+        integrity="sha512-mwSdINqQLRATPXGW3x8ce1DFtv+qX8V1sq1ciyGdOyqtFGbU6oU2a+o3ol5QcoXfiX9pI6gZOq9i3k14AQL0UQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.css"
+        integrity="sha512-aTSfPrXKMZ4BMWKzbM4VFTAuI3rPpTpBlt830eRuGVNcGsEtbjdZvrgBFmSQATMgvGFKjdXiLa7rDY82LJ6/eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+        <div class="loader"></div>
+    </div> -->
+    <div id="preloder">
+
+        <span class="loader"></span>
+    </div>
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="img/myLogo.png" alt=""></a>
+
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="#"><i class="ri-heart-3-line"></i> <span>1</span></a></li>
+                <li><a href="#"><i class="ri-shopping-cart-2-line"></i><span>3</span></a></li>
+            </ul>
+            <div class="header__cart__price">item: <span>$150.00</span></div>
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <!-- <img src="" alt=""> -->
+                <div>English</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Spanis</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="header__top__right__auth">
+                <a href="#"><i class="ri-user-3-fill"></i>Login</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./shop-grid.html">Shop</a></li>
+                <!-- <li><a href="#">Pages</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Shop Details</a></li>
+                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="./checkout.html">Check Out</a></li>
+                        <li><a href="./blog-details.html">Blog Details</a></li>
+                    </ul>
+                </li> -->
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+
+                <li>Free Shipping for all Order of $99</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
+
+    <main id="mainContent">
+        <!-- Header Section Begin -->
+        <!-- <header class="custom-header">
+        <div class="custom-header-top">
+            <div class="custom-header-wrapper">
+                <div class="custom-header-left">
+                    <ul>
+
+                        <li>Free Shipping for all Order of $99</li>
+                    </ul>
+                </div>
+                <div class="custom-header-right">
+                    <div class="custom-header-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                    <div class="custom-header-language">
+                        <img src="img/language.png" alt="">
+                        <div>English</div>
+                        <span class="arrow_carrot-down"></span>
+                        <ul class="custom-language-dropdown">
+                            <li><a href="#">Spanish</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </div>
+                    <div class="custom-header-auth">
+                        <a href="#"><i class="fa fa-user"></i> Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-header-main">
+            <div class="custom-header-logo">
+                <a href="./index.html"><img src="img/myLogo.png" alt=""></a>
+            </div>
+            <nav class="custom-header-menu">
+
+                <ul>
+                    <li class="active"><a href="./index.html">Home</a></li>
+                    <li><a href="./shop-grid.html">Shop</a></li>
+
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="custom-header-cart">
+                <ul>
+                    <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                    <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                </ul>
+                <div class="custom-cart-price">item: <span>$150.00</span></div>
+            </div>
+            <div class="custom-hamburger-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header> -->
+        <!-- Header Section End -->
+        <!-- Placeholder for the header -->
+        <div id="header-placeholder"></div>
+
+        <!-- Hero Section Begin -->
+        <section class="custom-hero">
+            <div class="custom-hero-wrapper">
+                <div class="custom-hero-sidebar">
+                    <div class="custom-hero-categories">
+                        <div class="custom-hero-categories-header">
+                            <i class="fa fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <div class="menu-category">
+
+
+                            <ul class="custom-hero-categories-list">
+                                <!-- <li><a href="#">Fresh Meat</a></li>
+                        <li><a href="#">Vegetables</a></li>
+                        <li><a href="#">Fruit & Nut Gifts</a></li>
+                        <li><a href="#">Fresh Berries</a></li>
+                        <li><a href="#">Ocean Foods</a></li>
+                        <li><a href="#">Butter & Eggs</a></li>
+                        <li><a href="#">Fastfood</a></li>
+                        <li><a href="#">Fresh Onion</a></li>
+                        <li><a href="#">Papaya & Crisps</a></li>
+                        <li><a href="#">Oatmeal</a></li>
+                        <li><a href="#">Fresh Bananas</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-hero-main">
+                    <div class="custom-hero-search">
+                        <div class="custom-hero-search-form">
+                            <form action="#">
+                                <!-- <div class="custom-hero-search-categories">
+                                All Categories
+                                <span class="arrow_carrot-down"></span>
+                            </div> -->
+                                <input type="text" placeholder="What do you need?">
+                                <!-- <button type="submit" class="custom-btn">SEARCH</button> -->
+                                <i class="ri-search-line search-icon"></i>
+                            </form>
+                        </div>
+                        <div class="custom-hero-search-contact">
+                            <div class="custom-hero-search-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="custom-hero-search-text">
+                                <h5>+65 11.188.888</h5>
+                                <span>Support 24/7 Time</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-container custom-hero-carousel">
+                        <div class="swiper-wrapper">
+                            <!-- Carousel Item 1 -->
+                            <div class="swiper-slide custom-hero-carousel-item"
+                                style="background-image: url('img/hero1.jpg');">
+                                <div class="custom-hero-banner-text">
+                                    <span>FRUIT FRESH</span>
+                                    <h2>Vegetable 100% Organic</h2>
+                                    <p>Free Pickup and Delivery Available</p>
+                                    <!-- <a href="#" class="custom-primary-btn">SHOP NOW</a> -->
+                                    <a href="#" class="custom-primary-btn"><span>SHOP NOW</span></a>
+                                </div>
+                            </div>
+
+
+                            <!-- Carousel Item 3 -->
+                            <div class="swiper-slide custom-hero-carousel-item"
+                                style="background-image: url('img/hero\ winter.jpg');">
+                                <div class="custom-hero-banner-text">
+                                    <span>Winter Sale</span>
+                                    <h2>Up to 50% Off</h2>
+                                    <p>Order Now and Save Big</p>
+                                    <!-- <a href="#" class="custom-primary-btn">SHOP NOW</a> -->
+                                    <a href="#" class="custom-primary-btn"><span>SHOP NOW</span></a>
+                                </div>
+                            </div>
+                            <!-- Carousel Item 3 -->
+                            <div class="swiper-slide custom-hero-carousel-item"
+                                style="background-image: url('img/hero\ gadget.jpg');">
+                                <div class="custom-hero-banner-text">
+                                    <span>Fresh Arrivals</span>
+                                    <h2>Check Out the Latest Trends</h2>
+                                    <p>Free Pickup and Delivery Available</p>
+                                    <!-- <a href="#" class="custom-primary-btn">Explore Now</a> -->
+                                    <a href="#" class="custom-primary-btn"><span>EXPLORE NOW</span></a>
+                                </div>
+                            </div>
+
+                            <!-- Carousel Item 2 -->
+                            <div class="swiper-slide custom-hero-carousel-item"
+                                style="background-image: url('img/produce.jpg');">
+                                <div class="custom-hero-banner-text">
+                                    <span>FRESH HARVEST</span>
+                                    <h2>Fruits <br />Naturally Grown</h2>
+                                    <p>Order Now and Save Big</p>
+                                    <!-- <a href="#" class="custom-primary-btn">SHOP NOW</a> -->
+                                    <a href="#" class="custom-primary-btn"><span>SHOP NOW</span></a>
+                                </div>
+                            </div>
+
+                            <!-- Carousel Item 2 -->
+                            <div class="swiper-slide custom-hero-carousel-item"
+                                style="background-image: url('img/hero\ black.jpg');">
+                                <div class="custom-hero-banner-text">
+                                    <span>Members Only!</span>
+                                    <h2>Exclusive Discounts for You</h2>
+                                    <p>Free Pickup and Delivery Available</p>
+                                    <!-- <a href="#" class="custom-primary-btn">SHOP NOW</a> -->
+                                    <a href="#" class="custom-primary-btn"><span>SHOP NOW</span></a>
+                                </div>
+                            </div>
+                            <!-- Carousel Item 2 -->
+                            <div class="swiper-slide custom-hero-carousel-item"
+                                style="background-image: url('img/sales.jpg');">
+                                <div class="custom-hero-banner-text">
+                                    <span>Flash Sale</span>
+                                    <h2>Hurry! Ends in 24 Hours</h2>
+                                    <p>Order Now and Save Big</p>
+                                    <!-- <a href="#" class="custom-primary-btn">SHOP NOW</a> -->
+                                    <a href="#" class="custom-primary-btn"><span>EXPLORE NOW</span></a>
+                                </div>
+                            </div>
+                            <!-- Add 8 more items -->
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Navigation Buttons -->
+                        <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+
+        <section class="">
+            <div class="">
+                <div class="feature-list-wrap">
+                    <div class="feature-list">
+                        <div class="box-icon">
+                            <!-- <i class="ri-money-dollar-circle-line"></i> -->
+                            <img src="img/return.png" alt="">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-title">Return Policy</h3>
+                            <p class="box-text">Money back guarantee</p>
+                        </div>
+                    </div>
+                    <!-- <div class="feature-list-line"></div> -->
+                    <div class="feature-list">
+                        <div class="box-icon">
+                            <!-- <i class="ri-truck-line"></i> -->
+                            <img src="img/free-shipping.png" alt="">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-title">Free Shipping</h3>
+                            <p class="box-text">On all orders over $50.00</p>
+                        </div>
+                    </div>
+                    <!-- <div class="feature-list-line"></div> -->
+                    <div class="feature-list">
+                        <div class="box-icon">
+                            <!-- <i class="ri-map-pin-line"></i> -->
+                            <img src="img/map-location.png" alt="">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-title">Store Locator</h3>
+                            <p class="box-text">Find your nearest store</p>
+                        </div>
+                    </div>
+                    <!-- <div class="feature-list-line"></div> -->
+                    <div class="feature-list">
+                        <div class="box-icon">
+                            <!-- <i class="ri-headphone-line"></i> -->
+                            <img src="img/24-hours-service.png" alt="">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-title">24/7 Support</h3>
+                            <p class="box-text">Contact us 24 hours a day</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- popular products -->
+        <!-- Popular Products Section -->
+        <section class="popular-products-section">
+            <div class="popular-header">
+                <img src="img/fire.png" alt="">
+                <h2>Popular Products</h2>
+
+            </div>
+
+            <!-- Swiper Container for the Carousel -->
+            <div class="swiper-container-product">
+                <!-- <div class="swiper-wrapper swiper-wrapper-popular">
+                    Product 1
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="/img/hero1.jpg" alt="Product 1" class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-name">Product 1</h3>
+                                <p class="product-price">$99.99</p>
+                            </div>
+
+                            Hover Controls
+                            <div class="product-controls">
+                                <button class="add-to-cart">
+                                    <i class="ri-shopping-cart-2-line"></i> Add to Cart
+                                </button>
+                                <button class="add-to-wishlist">
+                                    <i class="ri-heart-line"></i> Wishlist
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    Product 2
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="/img/produce.jpg" alt="Product 2" class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-name">Product 2</h3>
+                                <p class="product-price">$149.99</p>
+                            </div>
+
+                            Hover Controls
+                            <div class="product-controls">
+                                <button class="add-to-cart">
+                                    <i class="ri-shopping-cart-2-line"></i> Add to Cart
+                                </button>
+                                <button class="add-to-wishlist">
+                                    <i class="ri-heart-line"></i> Wishlist
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    Product 1
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="/img/hero1.jpg" alt="Product 1" class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-name">Product 1</h3>
+                                <p class="product-price">$99.99</p>
+                            </div>
+
+                            Hover Controls
+                            <div class="product-controls">
+                                <button class="add-to-cart">
+                                    <i class="ri-shopping-cart-2-line"></i> Add to Cart
+                                </button>
+                                <button class="add-to-wishlist">
+                                    <i class="ri-heart-line"></i> Wishlist
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    Product 1
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="/img/hero1.jpg" alt="Product 1" class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-name">Product 1</h3>
+                                <p class="product-price">$99.99</p>
+                            </div>
+
+                            Hover Controls
+                            <div class="product-controls">
+                                <button class="add-to-cart">
+                                    <i class="ri-shopping-cart-2-line"></i> Add to Cart
+                                </button>
+                                <button class="add-to-wishlist">
+                                    <i class="ri-heart-line"></i> Wishlist
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    Product 2
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="/img/produce.jpg" alt="Product 2" class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-name">Product 2</h3>
+                                <p class="product-price">$149.99</p>
+                            </div>
+
+                            Hover Controls
+                            <div class="product-controls">
+                                <button class="add-to-cart">
+                                    <i class="ri-shopping-cart-2-line"></i> Add to Cart
+                                </button>
+                                <button class="add-to-wishlist">
+                                    <i class="ri-heart-line"></i> Wishlist
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    Add more products as needed...
+
+                </div> -->
+                <div class="swiper-wrapper swiper-wrapper-popular">
+                    <!-- Product items will be injected here by JavaScript -->
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <!-- Deals of the Week Section -->
+        <section class="deals-of-the-week">
+            <!-- Header Section -->
+            <div class="deals-header">
+                <!-- <i class="ri-time-line hurry-icon"></i> -->
+                <div class="hurry-sales">
+                    <img src="img/flash-sale.png" alt="">
+                    <h2>Hurry Up Now</h2>
+                </div>
+                <p>Deals Of The Week</p>
+                <p class="description">
+                    Integrate organic matter through composting, cover cropping, and mulching. This enriches the soil
+                    with
+                    essential nutrients.
+                </p>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-timer">
+                <p>Time Left: <span id="timer"></span></p>
+            </div>
+
+            <!-- Deals Cards Section -->
+            <div class="deals-cards">
+                <!-- Deal Information Card -->
+                <div class="deal-info-card">
+                    <h3>20% Online OFF</h3>
+                    <p>On Every Purchase Made </p>
+                    <h4>This week</h4>
+                    <!-- <button class="shop-now-btn">Shop Now</button> -->
+                </div>
+
+                <!-- Product Cards -->
+                <div class="deal-card">
+                    <img src="img/produce.jpg" alt="Deal 1" class="deal-image">
+                    <h4>Deal 1</h4>
+                    <p>$25.99</p>
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+
+                <div class="deal-card">
+                    <img src="img/hero winter.jpg" alt="Deal 2" class="deal-image">
+                    <h4>Deal 2</h4>
+                    <p>$19.99</p>
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+
+                <div class="deal-card">
+                    <img src="img/untensils.jpg" alt="Deal 3" class="deal-image">
+                    <h4>Deal 3</h4>
+                    <p>$29.99</p>
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="black-friday-banner">
+            <div class="banner-content">
+                <h1 class="headline">
+                    <span class="animated-text">Black Friday</span> Sales
+                </h1>
+                <p class="subtext">Up to <span>70% OFF</span> on all items!</p>
+                <a href="#shop-now" class="shop-button">Shop Now</a>
+            </div>
+        </div>
+        <footer class="ecommerce-footer">
+            <div class="footer-container">
+                <!-- Company Info -->
+                <div class="footer-section company-info">
+                    <h3>About Us</h3>
+                    <p>We offer the best deals on your favorite products, ensuring a smooth and enjoyable shopping
+                        experience.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div class="footer-section customer-service">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#returns">Returns & Refunds</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                        <li><a href="#track-order">Track Order</a></li>
+                        <li><a href="#support">Support Center</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Subscription -->
+                <div class="footer-section newsletter">
+                    <h3>Stay Connected</h3>
+                    <p>Subscribe to our newsletter for exclusive offers and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-fill"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 YourCompany. All rights reserved.</p>
+            </div>
+        </footer>
+
+
+    </main>
+
+    <script src="js/injectHeader.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="/js/script.js"></script> -->
+    <script>
+
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                bulletClass: 'custom-pagination-bullet',
+                bulletActiveClass: 'custom-pagination-bullet-active',
+            },
+            on: {
+                slideChangeTransitionStart: () => {
+                    // Trigger animations when the slide changes
+                    document.querySelectorAll('.custom-hero-banner-text').forEach(el => {
+                        el.classList.remove('fade-in'); // Remove previous animation
+                    });
+                },
+                slideChangeTransitionEnd: () => {
+                    const activeSlide = document.querySelector('.swiper-slide-active .custom-hero-banner-text');
+                    if (activeSlide) {
+                        activeSlide.classList.add('fade-in'); // Trigger fade-in animation
+                    }
+                },
+            },
+        });
+
+    </script>
+    <script>
+
+        // Initialize Swiper
+        const swipes = new Swiper('.swiper-container-product', {
+            spaceBetween: 50, // Space between the products
+            loop: true,       // Infinite looping of slides
+            autoplay: {
+                delay: 3000,  // Time between slides in milliseconds (3 seconds)
+                disableOnInteraction: false, // Keeps autoplay running after user interaction
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // Adjust the number of slides shown on smaller screens
+                1024: {
+                    slidesPerView: 4,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                480: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+
+
+    </script>
+    <script src="js/fetchCategories.js">
+
+    </script>
+</body>
+
+</html>
